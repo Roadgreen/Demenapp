@@ -1,0 +1,12 @@
+.MuiTypography-noWrap{
+    width: 90%;
+}
+.icon{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    float: left;
+    margin-right: 0px;
+}
+

@@ -1,0 +1,28 @@
+.box{
+    background-color:'#0a1929';
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Form{
+    width: 70%;
+    text-align: center;
+    color: rgb(197, 148, 56);
+}
+.button{
+    color: rgb(197, 148, 56);
+}
+.Response{
+    background-color: rgb(35, 209, 44);
+    border-radius: 0.5em;
+    color: black;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    font-size: 0.6em;
+margin: 20px;
+}

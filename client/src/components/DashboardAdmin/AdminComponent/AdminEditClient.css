@@ -1,0 +1,13 @@
+.edit{
+  border: 2px solid grey;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  margin: 20px;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+  background: rgb(218, 219, 224);
+}
