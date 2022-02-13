@@ -5,6 +5,10 @@ var router = express.Router();
 const userRoute = require('./routes/user.routes')
 const clientRoute = require('./routes/client.routes')
 require('./config/db');
+const path = require('path');
+
+require('dotenv').config();
+const PORT = process.env.PORT || 8080;
 
 
 //bodyparser
@@ -26,6 +30,6 @@ app.get('*', (_,res) => {
   res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
 })
 
-app.listen(8080, function () {
+app.listen(PORT, function () {
     console.log('CORS-enabled web server listening on port 80')
   })
