@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import logo from '../../img/logo-demenhouse.png'
+import logo from '../../img/logo-demenapp.svg'
 import './Login.css';
 import {Container, Form, Button} from 'react-bootstrap'
 import {Link, Redirect,useHistory} from 'react-router-dom'
@@ -76,11 +76,16 @@ return(
    
     
     <Container   className="containerLogin">
+ 
+      <div className="containerLogo" alt="logo"> 
+      <img src={logo} className="logoM" alt="logo"/>
+      </div>
+      
         
    
         
    <Form onSubmit={onSubmit}>
-       <img src={logo} className="logo" alt="logo"/>
+       
       
          <Form.Group className="mb-3" controlId="email">
     <Form.Label>Email</Form.Label>

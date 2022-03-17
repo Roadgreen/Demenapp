@@ -1,16 +1,24 @@
-.containerLogin{
-    height: 500px;
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body{
+    margin: 0;
+    padding: 0;
 }
-.logo{
-    width: 10em;
-    height: 10em;
-    margin-left: auto;
-    margin-right: auto;
+.containerLogin{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerLogo {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+   
+
+}
+.logoM{
     
+    height: 150px;
+    width: 150px;
+  
 }
 .forms{
     margin: 50px;

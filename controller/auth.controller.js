@@ -186,7 +186,7 @@ module.exports.signUp = async (req, res) => {
                                       <td align="center" valign="top">
                                               <table width="446" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
                                                       <tr>
-                                                              <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="10"></td>
+                                                             
                                                               <td>
                                                                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                               <tr>
@@ -198,7 +198,7 @@ module.exports.signUp = async (req, res) => {
                                                                                                               <td>
                                                                                                                       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="30" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
               
-                                                                                                                      <div class="img-center" style="font-size:0pt; line-height:0pt; text-align:center"><a href="#" target="_blank"><img src="images/logo.jpg" border="0" width="74" height="23" alt="" /></a></div>
+                                                                                                                  
                                                                                                                       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="24" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
               
                                                                                                               </td>
@@ -214,114 +214,91 @@ module.exports.signUp = async (req, res) => {
                                                                                                                       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="36" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
               
                                                                                                                      
-                                                                                                                      <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left"><strong><a href="#" target="_blank" class="link" style="color:#00b3c3; text-decoration:none"><span class="link" style="color:#00b3c3; text-decoration:none">Hi Darren,</span></a></strong></div>
+                                                                                                                      <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left"><strong><a href="#" target="_blank" class="link" style="color:#00b3c3; text-decoration:none"><span class="link" style="color:#00b3c3; text-decoration:none">Hello ${username}</span></a></strong></div>
                                                                                                                       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="20" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
               
               
                                                                                                                       <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left">
-                                                                                                                              Thanks for signing for Djed, the family app. It's easy
-                                                                                                                              to set up your family and start sharing information.
+                                                                                                                        Bienvenue chez Demen’App
+
+                                                                                                                        Nous sommes heureux de vous accueillir. Votre demande à bien été enregistré et est en cours de
+                                                                                                                        
+                                                                                                                        validation. Nous vous confirmons votre inscription dans un délai de 48h.
                                                                                                                       </div>
                                                                                                                       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="26" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
               
               
-                                                                                                                      <!-- Button -->
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                                                                              <tr>
-                                                                                                                                      <td align="center">
-                                                                                                                                              <table border="0" cellspacing="0" cellpadding="0" bgcolor="#0aa5b5" style="border-radius: 4px;">
-                                                                                                                                                      <tr>
-                                                                                                                                                              <td>
-                                                                                                                                                                      <table width="162" border="0" cellspacing="0" cellpadding="0" bgcolor="#0ccbd7" style="border-radius: 4px;">
-                                                                                                                                                                              <tr>
-                                                                                                                                                                                      <td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20" height="46">&nbsp;</td>
-                                                                                                                                                                                      <td>
-                                                                                                                                                                                              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-              
-                                                                                                                                                                                              <div class="text-button" style="color:#ffffff; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:center; font-weight:bold">
-                                                                                                                                                                                                      <a href="#" target="_blank" class="link-white" style="color:#ffffff; text-decoration:none"><span class="link-white" style="color:#ffffff; text-decoration:none">Get started</span></a>
-                                                                                                                                                                                              </div>
-                                                                                                                                                                                              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-              
-                                                                                                                                                                                      </td>
-                                                                                                                                                                                      <td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
-                                                                                                                                                                              </tr>
-                                                                                                                                                                      </table>
-                                                                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="2" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-              
-                                                                                                                                                              </td>
-                                                                                                                                                      </tr>
-                                                                                                                                              </table>
-                                                                                                                                      </td>
-                                                                                                                              </tr>
-                                                                                                                      </table>
-                                                                                                                      <!-- END Button -->
-              
+                                                                                                                   
                                                                                                                       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="28" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
               
+                                                                                                                   
+              
+                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="32" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
+              
+              
+                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                                                              <tr>
+                                                                                                                                     
+                                                                                                                                            
+                                                                                                                                      </td>
+                                                                                                                                      <td>
+                                                                                                                                              <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left"><strong>
+                                                                                                                                                
+                                                                                                                                                L’application vous permet :</div>
+                                                                                                                                      </td>
+                                                                                                                              </tr>
+                                                                                                                      </table>
+                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="32" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
+              
+                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                                                              <tr>
+                                                                                                                                      <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="40">
+                                                                                                                                             
+                                                                                                                                      </td>
+                                                                                                                                      <td>
+                                                                                                                                              <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left">De créer une liste de client..</div>
+                                                                                                                                      </td>
+                                                                                                                              </tr>
+                                                                                                                      </table>
+                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="32" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
+              
+                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                                                              <tr>
+                                                                                                                                      <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="40">
+                                                                                                                                             
+                                                                                                                                      </td>
+                                                                                                                                      <td>
+                                                                                                                                              <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left">D’être informé du suivi des dossiers en temps réel..</div>
+                                                                                                                                      </td>
+                                                                                                                              </tr>
+                                                                                                                      </table>
+                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="32" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
+              
+                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                                                              <tr>
+                                                                                                                                      <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="40">
+                                                                                                                                           
+                                                                                                                                      </td>
+                                                                                                                                      <td>
+                                                                                                                                              <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left">De bénéficier pour chaque affaire rapportée d’une rémunération à hauteur de 5% du devis
+
+                                                                                                                                                HT..</div>
+                                                                                                                                      </td>
+                                                                                                                              </tr>
+                                                                                                                      </table>
+                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="32" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
+              
                                                                                                                       <div style="font-size:0pt; line-height:0pt; height:1px; background:#f1f1f1; "><img src="images/spacer.gif" width="1" height="1" style="height:1px" alt="" /></div>
               
                                                                                                                       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="32" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
               
               
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                                                                              <tr>
-                                                                                                                                      <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="40">
-                                                                                                                                              <div class="img" style="font-size:0pt; line-height:0pt; text-align:left"><img src="images/ico1.jpg" border="0" width="27" height="27" alt="" /></div>
-                                                                                                                                      </td>
-                                                                                                                                      <td>
-                                                                                                                                              <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left"><strong>Djed was created for your family</strong> &mdash; invite parents, kids, caregivers, pets, anyone you'd like!</div>
-                                                                                                                                      </td>
-                                                                                                                              </tr>
-                                                                                                                      </table>
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="32" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-              
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                                                                              <tr>
-                                                                                                                                      <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="40">
-                                                                                                                                              <div class="img" style="font-size:0pt; line-height:0pt; text-align:left"><img src="images/ico2.jpg" border="0" width="27" height="27" alt="" /></div>
-                                                                                                                                      </td>
-                                                                                                                                      <td>
-                                                                                                                                              <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left">Djed lets family members share information and chat about it using<em>real-time chat</em>.</div>
-                                                                                                                                      </td>
-                                                                                                                              </tr>
-                                                                                                                      </table>
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="32" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-              
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                                                                              <tr>
-                                                                                                                                      <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="40">
-                                                                                                                                              <div class="img" style="font-size:0pt; line-height:0pt; text-align:left"><img src="images/ico3.jpg" border="0" width="27" height="27" alt="" /></div>
-                                                                                                                                      </td>
-                                                                                                                                      <td>
-                                                                                                                                              <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left">It's easy to hide information (e.g. from kids or ) caregivers) by using our simple <em>privacy feature</em>.</div>
-                                                                                                                                      </td>
-                                                                                                                              </tr>
-                                                                                                                      </table>
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="32" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-              
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                                                                              <tr>
-                                                                                                                                      <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="40">
-                                                                                                                                              <div class="img" style="font-size:0pt; line-height:0pt; text-align:left"><img src="images/ico4.jpg" border="0" width="27" height="27" alt="" /></div>
-                                                                                                                                      </td>
-                                                                                                                                      <td>
-                                                                                                                                              <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left">You can also connect to other families like grandparents and siblings. This is your <em>Tribe</em>.</div>
-                                                                                                                                      </td>
-                                                                                                                              </tr>
-                                                                                                                      </table>
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="32" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-              
-                                                                                                                      <div style="font-size:0pt; line-height:0pt; height:1px; background:#f1f1f1; "><img src="images/spacer.gif" width="1" height="1" style="height:1px" alt="" /></div>
-              
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="32" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-              
-              
-                                                                                                                      <div class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left">
-                                                                                                                              We hope you enjoy! Check out our <strong>blog</strong> on Medium if you have a moment.
+                                                                                                                      <br class="text" style="color:#49555c; font-family:Arial,sans-serif; font-size:14px; line-height:20px; text-align:left">
+                                                                                                                        Cordialement,</br>
+                                                                                                                        L’équipe Demen’House.                                                                          Si vous avez des questions ou si vous rencontrez des problèmes, <strong>contactez-nous!</strong>                                                        
                                                                                                                               <br />
                                                                                                                               <br />
-                                                                                                                              - the Djed Team
+                                                                                                                              contact@demenhouse.fr
                                                                                                                       </div>
               
                                                                                                                       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="30" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
@@ -330,7 +307,7 @@ module.exports.signUp = async (req, res) => {
                                                                                                               <td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="34"></td>
                                                                                                       </tr>
                                                                                               </table>
-                                                                                              <div style="font-size:0pt; line-height:0pt; height:2px; background:#0da5b5; "><img src="images/spacer.gif" width="1" height="2" style="height:2px" alt="" /></div>
+         
               
                                                                                               <!-- END Main -->
                                                                                               <!-- Footer -->
@@ -340,21 +317,14 @@ module.exports.signUp = async (req, res) => {
                                                                                                               <td>
                                                                                                                       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="20" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
               
-                                                                                                                      <div class="img-center" style="font-size:0pt; line-height:0pt; text-align:center"><a href="#" target="_blank"><img src="images/footer_logo.jpg" border="0" width="40" height="40" alt="" /></a></div>
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="22" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
+                                                                                                                  
+                                                                                                                     
               
-                                                                                                                      <div class="text-footer" style="color:#d5d5d5; font-family:Arial,sans-serif; font-size:10px; line-height:14px; text-align:center">
-                                                                                                                              Made in small batches by <a href="#" target="_blank" class="link" style="color:#00b3c3; text-decoration:none"><span class="link" style="color:#00b3c3; text-decoration:none">Djed Studios LLC</span></a> | <a href="#" target="_blank" class="link" style="color:#00b3c3; text-decoration:none"><span class="link" style="color:#00b3c3; text-decoration:none">Blog</span></a>
-                                                                                                                              <br />
-                                                                                                                              <a href="#" target="_blank" class="link2" style="color:#d5d5d5; text-decoration:none"><span class="link2" style="color:#d5d5d5; text-decoration:none">115 E 5th Street, Austin TX 78701</span></a>
-                                                                                                                              <br />
-                                                                                                                              <br />
-                                                                                                                              <a href="#" target="_blank" class="link" style="color:#00b3c3; text-decoration:none"><span class="link" style="color:#00b3c3; text-decoration:none">Unsubscribe</span></a>  from Djed emails
-                                                                                                                      </div>
-                                                                                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="40" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
+                                                                                                                  
+                                                                                                                    
               
                                                                                                               </td>
-                                                                                                              <td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="34"></td>
+                                                                                                             
                                                                                                       </tr>
                                                                                               </table>
                                                                                               <!-- END Footer -->
@@ -362,14 +332,15 @@ module.exports.signUp = async (req, res) => {
                                                                               </tr>
                                                                       </table>
                                                               </td>
-                                                              <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="10"></td>
+                                                              
                                                       </tr>
                                               </table>
                                       </td>
                               </tr>
                       </table>
               </body>
-              </html>`, // html body
+              </html>
+              `
             });
             res.send("sucess");
 
