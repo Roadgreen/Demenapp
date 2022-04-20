@@ -11,6 +11,7 @@ Router.post('/register', auth.signUp);
 Router.post('/login', auth.signIn);
 Router.get('/isAuth', auth.isAuth);
 Router.get('/notif', auth.notif);
+Router.get('/notifsqueeze', auth.notifsqueeze)
 Router.get('/info', auth.info);
 Router.post('/delete', auth.delete);
 Router.get('/validate', auth.validate);

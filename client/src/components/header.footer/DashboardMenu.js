@@ -180,7 +180,7 @@ setInterval(() => {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' ,bgcolor:'#0a1929'}}>
+    <Box className='BOXUSER' sx={{ display: 'flex'}}>
       <CssBaseline />
       <AppBar 
         position="fixed"

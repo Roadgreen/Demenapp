@@ -33,6 +33,19 @@ const getNotif = async ()=> {
     })
 }
 
+const squeeznotif = async () => {
+  await axios.get('/api/user/notifsqueeze',{
+    params: {
+      ID: idAgent
+    }
+  }).then((res)=>{
+console.log(notif)
+  })
+}
+setTimeout(()=>{
+  squeeznotif()
+},5000)
+
 useEffect(()=>{
  
     getNotif();

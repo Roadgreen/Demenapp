@@ -75,10 +75,10 @@ module.exports.signIn = async (req, res) => {
 };
 
 module.exports.signUp = async (req, res) => {
-  const { username, nom, prenom, email, password, ville,tel, rue, numero, postal, Cheque,Rib} =
+  const { username, nom, prenom, email, password, ville,tel, rue, numero, postal, Cheque,Rib,type,nameOf} =
     req.body.formData;
   //console des infos du register coté front:
-  console.log(username, nom, prenom, email, password, ville, rue, numero);
+  console.log(username, nom, prenom, email, password, ville, rue, numero,type,nameOf);
   const findedUser = await User.findOne({ email: email });
   console.log(findedUser);
   if (findedUser !== null) {
@@ -93,6 +93,8 @@ module.exports.signUp = async (req, res) => {
           } else {
             const newUser = new User({
               username: username,
+              type,
+              nameOf,
               nom: nom,
               prenom: prenom,
               isOk: false,
@@ -366,6 +368,12 @@ module.exports.notif = async (req, res) => {
    
 
 };
+module.exports.notifsqueeze = async (req, res) => {
+  const {ID} = req.query;
+ await Notif.deleteMany({userId: ID});
+
+};
+
 
 module.exports.info = async (req, res) => {
  

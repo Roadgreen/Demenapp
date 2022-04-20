@@ -6,6 +6,12 @@ const  mongoose = require('mongoose');
         required: true,
         type: String
     } ,
+    type:{
+       type: String
+    },
+    nameOf:{
+        type: String
+    },
     email:{
           required: true,
           type: String,
@@ -47,7 +53,7 @@ const  mongoose = require('mongoose');
               type: String
           },
           Cheque:{
-              type: Boolean
+              type: String
           }
       },
       notification: [[]],

@@ -60,8 +60,10 @@ useEffect(()=>{ checkUser()},[])
  const [id,setId]= useState('');
  const [edit, setEdit] = useState(false);
 
-  const  [a,b,c,d,e,f,g,h] = [{ field: 'nom', headerName: 'Nom', width: 140 },
+  const  [a,b,c,d,e,f,g,h,i,j] = [{ field: 'nom', headerName: 'Nom', width: 140 },
 { field: 'prenom', headerName: 'Prenom', width: 140 },
+{ field: 'type', headerName: 'Type utilisateur', width: 140 },
+{ field: 'nameOf', headerName: `Nom de l'entreprise`, width: 140 },
 { field: 'email', headerName: 'email', width: 140 },
 {
   field: 'ville',
@@ -83,7 +85,7 @@ useEffect(()=>{ checkUser()},[])
 },{ field: 'tel', headerName: 'Tel', width: 140 },{ field: 'rib', headerName: 'RIB/CHEQUE', width: 140 }];
 
 const columnsWait = [
-  a,b,c,d,e,f,g,h,
+  a,b,c,d,e,f,g,h,i,j,
   {
         field: 'actions',
         type: 'actions',
@@ -105,7 +107,7 @@ const columnsWait = [
       },
     ];
     const columnsVal = [
-      a,b,c,d,e,f,g,h,
+      a,b,c,d,e,f,g,h,i,j,
       {
             field: 'actions',
             type: 'actions',
@@ -133,10 +135,10 @@ const columnsWait = [
         ];
 
 const rows = userWait.map(x => {
-  return {id: x._id, nom: x.nom,tel: x.tel, prenom: x.prenom, email: x.email, ville: x.adresse.ville, rue: x.adresse.rue, CPostal: x.adresse.postalCode,rib: x.payment.Rib}
+  return {id: x._id,type: x.type,nameOf: x.nameOf, nom: x.nom,tel: x.tel, prenom: x.prenom, email: x.email, ville: x.adresse.ville, rue: x.adresse.rue, CPostal: x.adresse.postalCode,rib: x.payment.Rib}
  });
  const rows2 = userVal.map(x => {
-  return {id: x._id, nom: x.nom,tel: x.tel, prenom: x.prenom, email: x.email, ville: x.adresse.ville, rue: x.adresse.rue, CPostal: x.adresse.postalCode, rib: x.payment.Rib}
+  return {id: x._id,type: x.type,nameOf: x.nameOf, nom: x.nom,tel: x.tel, prenom: x.prenom, email: x.email, ville: x.adresse.ville, rue: x.adresse.rue, CPostal: x.adresse.postalCode, rib: x.payment.Rib}
  });
 
  Geocode.fromAddress("Eiffel Tower").then(

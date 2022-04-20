@@ -7,15 +7,26 @@
     margin-bottom: 20px;
     text-align: center;
 }
+.LogoRegisterDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 .logo{
-margin-left: 20%;
+width: 50%;
    
 }
 .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
     font-size: small;
     width: 20em;
+
 }
 .button{
     margin-bottom: 20px;
+    
 }

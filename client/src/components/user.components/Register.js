@@ -8,6 +8,7 @@ import { fontSize } from "@mui/system";
 
 const Register = () => {
   const [ribInput,setRibInput] = useState(false);
+  const [typeChoice,setTypeChoice] = useState('Auto');
     const [formData, setFormData] = useState({
       username: '',
       nom: '',
@@ -21,15 +22,40 @@ const Register = () => {
       postal:'',
       check:'',
       tel:'',
-      Cheque: false,
-      Rib:''
+      Cheque: ribInput,
+      Rib:ribInput,
+      type:'',
+      nameOf:''
     });
     
-    
-       
+   var Type = (a) =>{
+      if(a === 'Auto' || a === 'Autre'){
+        const Name= `Nom de l'entreprise`
+        const Town = `Ville de votre entreprise`
+        const Post = `Code postal de votre entreprise`
+        const arr = [Name,Town,Post];
+        return arr;
+      } else if(a === 'imo'){
+        const Name = `Nom de votre agence`
+        const Town = `Ville de votre Agence`
+        const Post = `Code postal de votre agence`
+        const arr = [Name,Town,Post];
+        return arr;
+      }
+      
+   }
+   var nameofType;
+   var TownOf;
+   var postalOf;
+   {typeChoice === 'imo' || typeChoice === 'Autre' || typeChoice === 'Auto'?  nameofType = Type(typeChoice)[0] : nameofType =''}; 
+
+   {typeChoice == 'imo' || typeChoice == 'Autre' || typeChoice == 'Auto'?  TownOf = Type(typeChoice)[1] : TownOf =''}; 
+  
+
+   
 
 
-    const {username,nom,prenom,email,tel,password,password2,ville,rue,numero,postal,check,Rib,Cheque} = formData;
+    const {username,nom,prenom,email,tel,password,password2,ville,rue,numero,postal,check,Rib,Cheque,type,nameOf} = formData;
 
     const onChange = e => setFormData({...formData, [e.target.name]: e.target.value});
 
@@ -70,15 +96,15 @@ const Register = () => {
         const vilerr = document.querySelector('.villeerror');
         vilerr.innerText = 'Veuillez rentrer la ville de votre agence';
         vilerr.style.color = 'red';
-      } else if(rue === ''){
+      } else if(rue === '' && typeChoice === 'Gardien' ||typeChoice == 'Particulier' ){
         const rueerr = document.querySelector('.rueerror');
         rueerr.innerText = 'Veuillez rentrer un numéro de rue correct';
         rueerr.style.color = 'red';
-      } else if(numero === ''){
+      } else if(numero === '' && typeChoice === 'Gardien' ||typeChoice == 'Particulier'){
         const numerr = document.querySelector('.numerror');
         numerr.innerText = 'Veuillez rentrer un numéro correct';
         numerr.style.color = 'red';
-      } else if(postal === ''){
+      } else if(postal === '' && typeChoice === 'Gardien' ||typeChoice == 'Particulier'){
         const postalerr = document.querySelector('.postalerror');
         postalerr.innerText = 'Veuillez renseigner le code postal de votre agence';
         postalerr.style.color = 'red';
@@ -94,6 +120,7 @@ const Register = () => {
       } 
       //on envoi vers le back
       else {
+        
         await axios.post('/api/user/register', {
           formData
         }).then(res => {
@@ -113,13 +140,60 @@ const Register = () => {
 
 return(
    
-    
     <Container className="all">
-        
-        
         <Form className="form" onSubmit={onSubmit}>
+          <div className="LogoRegisterDiv">
+            <img src={logo} className="logo" alt="logo"/></div>
 
-        <img src={logo} className="logo" alt="logo"/>
+       
+
+        <Col md>
+  <h5 style={{fontSize: '1.2em'}}>Vous êtes:</h5>
+<Form.Check
+        name='type'
+        type='radio'
+        label='Auto-entreprise'
+        id='1'
+        value='Auto'
+        onChange={e =>{onChange(e); setTypeChoice('Auto')}}
+      />
+       <Form.Check
+        name='type'
+        type='radio'
+        label='Agent Immobilier'
+        id='2'
+        value='imo'
+        onChange={e=>{onChange(e); setTypeChoice('imo')}}
+      />
+       <Form.Check
+        name='type'
+        type='radio'
+        label='Gardien'
+        id='3'
+        value='Gardien'
+        onChange={e=>{onChange(e); setTypeChoice('Gardien')}}
+      />
+       <Form.Check
+        name='type'
+        type='radio'
+        label='Particulier'
+        id='4'
+        value='Particulier'
+        onChange={e=>{onChange(e); setTypeChoice('Particulier')}}
+      />
+       <Form.Check
+        name='type'
+        type='radio'
+        label='Autre Entreprise'
+        id='5'
+        value='Autre'
+        onChange={e=>{onChange(e); setTypeChoice('Autre')}}
+      />
+
+ 
+ 
+
+</Col>
 
         <Form.Group className="mb-3" controlId="formBasicUsername">
     <Form.Label>Username</Form.Label>
@@ -141,11 +215,12 @@ return(
     <Form.Label>Email</Form.Label>
     <Form.Control size="sm" type="email" placeholder="Entrez votre email" name="email" value={email} onChange={e => onChange(e)} required />
   </Form.Group>
+  <p className="emailerror"></p>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Telephone</Form.Label>
     <Form.Control size="sm" type="tel" placeholder="Numéro de Téléphone" name="tel" value={tel} onChange={e => onChange(e)} required />
   </Form.Group>
-  <p className="emailerror"></p>
+  
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Mot de passe</Form.Label>
@@ -157,52 +232,73 @@ return(
     <Form.Control size="sm"  type="password" placeholder="Retapez votre mot de passe" name="password2" value={password2} onChange={e => onChange(e)} required/>
   </Form.Group>
   <p className="password2error"></p>
+
+  {typeChoice == 'imo' || typeChoice == 'Autre' || typeChoice == 'Auto'? 
+ <Form.Group className="mb-3" controlId="formBasicnameOf">
+ <Form.Label>{nameofType}</Form.Label>
+ <Form.Control size="sm"  type="String" placeholder={nameofType} name="nameOf" value={nameOf} onChange={e => onChange(e)} required/>
+</Form.Group> :
+''
+  }
+   {typeChoice == 'imo' || typeChoice ==  'Auto' || typeChoice == 'Autre'?  <Form.Group className="mb-3" controlId="Ville">
+    <Form.Label>{TownOf}</Form.Label>
+    <Form.Control size="sm"  type="string" placeholder={TownOf} name="ville" value={ville} onChange={e => onChange(e)} required/>
+  </Form.Group>:
   <Row className="g-2">
   <Col md>
   <Form.Group className="mb-3" controlId="Ville">
-    <Form.Label>Ville de votre agence</Form.Label>
-    <Form.Control size="sm"  type="string" placeholder="Nom de la ville" name="ville" value={ville} onChange={e => onChange(e)} required/>
+    <Form.Label>Ville</Form.Label>
+    <Form.Control size="sm"  type="string" placeholder="Ville" name="ville" value={ville} onChange={e => onChange(e)} required/>
   </Form.Group>
   <p className="villeerror"></p>
+ 
+
   <Form.Group className="mb-3" controlId="Postal">
-    <Form.Label>Code postal de votre agence</Form.Label>
+    <Form.Label>Code postal</Form.Label>
     <Form.Control size="sm"  type="Number" placeholder="Code postal"
     name="postal" value={postal} onChange={e => onChange(e)} required/>
   </Form.Group>
   <p className="postalerror"></p>
-  </Col>
-  <Col md>
-  <Form.Group className="mb-3" controlId="rue">
-    <Form.Label>Rue de votre agence</Form.Label>
-    <Form.Control size="sm"  type="string" placeholder="Nom de la rue" name="rue" value={rue} onChange={e => onChange(e)} required/>
-  </Form.Group>
-  <p className="rueerror"></p>
-  <Form.Group className="mb-5" controlId="num">
-    <Form.Label>Numéro de rue de votre agence</Form.Label>
-    <Form.Control size="sm"  type="number" placeholder="Numéro de rue"
-    name="numero" value={numero} onChange={e => onChange(e)} required/>
-  </Form.Group>
-  <p className="numerror"></p>
-</Col>
 
-</Row>
+  </Col>
+     <Col md>
+   
+   <Form.Group className="mb-3" controlId="rue">
+     <Form.Label>Rue</Form.Label>
+     <Form.Control  size="sm"  type="string" placeholder="Nom de la rue" name="rue" value={rue} onChange={e => onChange(e)} required/>
+   </Form.Group>
+   <p className="rueerror"></p>
+   <Form.Group className="mb-5" controlId="num">
+     <Form.Label>Numéro de rue </Form.Label>
+     <Form.Control size="sm"  type="number" placeholder="Numéro de rue"
+     name="numero" value={numero} onChange={e => onChange(e)} required/>
+   </Form.Group>
+   <p className="numerror"></p>
+ </Col>
+
+
+</Row>}
+<p className="villeerror"></p>
+<p className="rueerror"></p>
+<p className="numerror"></p>
+<p className="postalerror"></p>
 <Col md>
   <h5 style={{fontSize: '1.2em'}}>Choisissez votre moyen de rémunération :</h5>
 <Form.Check
-        name='group1'
+        name='Rib'
         type='radio'
         label='Chèque Cadeau'
         id='1'
-        value={Cheque}
-        onChange={e =>{onChange(e); setRibInput(false)}}
+        value={'cheque'}
+        onChange={e =>{onChange(e); setRibInput('cheque')}}
       />
        <Form.Check
-        name='group1'
+        name='Rib'
         type='radio'
-        label='RIB'
+        label='Virement Bancaire'
         id='2'
         value={'Rib'}
-        onChange={e=>{onChange(e); setRibInput(true)}}
+        onChange={e=>{onChange(e); setRibInput('Rib')}}
       />
   <p className="numerror"></p>
   {ribInput ?  <h3 style={{fontSize: '12px'}}>Veuillez envoyer votre RIB à l'adresse Mail suivante en précisant votre nom et votre prénom : <br/>demen.app.contact@gmail.com</h3>: console.log('')}
