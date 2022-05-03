@@ -61,7 +61,7 @@ const Register = () => {
 
     const onSubmit = async e => {
       e.preventDefault();
-
+      console.log(formData);
       //On remet par default les error vide
       const errmail = document.querySelector('.emailerror');
     errmail.innerText = '';
@@ -96,15 +96,16 @@ const Register = () => {
         const vilerr = document.querySelector('.villeerror');
         vilerr.innerText = 'Veuillez rentrer la ville de votre agence';
         vilerr.style.color = 'red';
-      } else if(rue === '' && typeChoice === 'Gardien' ||typeChoice == 'Particulier' ){
+      } else if(rue === '' && typeChoice === 'Gardien' ||rue === '' && typeChoice=== 'Particulier' ){
         const rueerr = document.querySelector('.rueerror');
-        rueerr.innerText = 'Veuillez rentrer un numéro de rue correct';
+        rueerr.innerText = 'Veuillez rentrer un nom de rue correct';
         rueerr.style.color = 'red';
-      } else if(numero === '' && typeChoice === 'Gardien' ||typeChoice == 'Particulier'){
+      } else if(numero === '' && typeChoice === 'Gardien' || numero === '' && typeChoice === 'Particulier'){
         const numerr = document.querySelector('.numerror');
         numerr.innerText = 'Veuillez rentrer un numéro correct';
         numerr.style.color = 'red';
-      } else if(postal === '' && typeChoice === 'Gardien' ||typeChoice == 'Particulier'){
+        console.log(numero);
+      } else if(postal === '' && typeChoice === 'Gardien' || postal === '' &&typeChoice == 'Particulier'){
         const postalerr = document.querySelector('.postalerror');
         postalerr.innerText = 'Veuillez renseigner le code postal de votre agence';
         postalerr.style.color = 'red';
@@ -153,7 +154,7 @@ return(
         name='type'
         type='radio'
         label='Auto-entreprise'
-        id='1'
+        id='Auto'
         value='Auto'
         onChange={e =>{onChange(e); setTypeChoice('Auto')}}
       />
@@ -161,7 +162,7 @@ return(
         name='type'
         type='radio'
         label='Agent Immobilier'
-        id='2'
+        id='imo'
         value='imo'
         onChange={e=>{onChange(e); setTypeChoice('imo')}}
       />
@@ -169,7 +170,7 @@ return(
         name='type'
         type='radio'
         label='Gardien'
-        id='3'
+        id='gardien'
         value='Gardien'
         onChange={e=>{onChange(e); setTypeChoice('Gardien')}}
       />
@@ -177,7 +178,7 @@ return(
         name='type'
         type='radio'
         label='Particulier'
-        id='4'
+        id='particulier'
         value='Particulier'
         onChange={e=>{onChange(e); setTypeChoice('Particulier')}}
       />
@@ -185,7 +186,7 @@ return(
         name='type'
         type='radio'
         label='Autre Entreprise'
-        id='5'
+        id='autre'
         value='Autre'
         onChange={e=>{onChange(e); setTypeChoice('Autre')}}
       />
@@ -270,8 +271,8 @@ return(
    <p className="rueerror"></p>
    <Form.Group className="mb-5" controlId="num">
      <Form.Label>Numéro de rue </Form.Label>
-     <Form.Control size="sm"  type="number" placeholder="Numéro de rue"
-     name="numero" value={numero} onChange={e => onChange(e)} required/>
+     <Form.Control size="sm"  type="string" placeholder="Numéro de rue"
+     name="numero" value={numero} onChange={e => {onChange(e); console.log(numero)}} required/>
    </Form.Group>
    <p className="numerror"></p>
  </Col>
@@ -301,7 +302,7 @@ return(
         onChange={e=>{onChange(e); setRibInput('Rib')}}
       />
   <p className="numerror"></p>
-  {ribInput ?  <h3 style={{fontSize: '12px'}}>Veuillez envoyer votre RIB à l'adresse Mail suivante en précisant votre nom et votre prénom : <br/>demen.app.contact@gmail.com</h3>: console.log('')}
+  {ribInput === 'Rib' ?  <h3 style={{fontSize: '12px'}}>Veuillez envoyer votre RIB à l'adresse Mail suivante en précisant votre nom et votre prénom : <br/>demen.app.contact@gmail.com</h3>: console.log('')}
  
 <p className="ribError"></p> 
 </Col>
