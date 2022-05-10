@@ -98,7 +98,7 @@ setInterval(() => {
       <Divider />
       <List>
        
-          <ListItem button onClick={() => {setActive('index');handleDrawerToggle()}}>
+          <ListItem button onClick={() => {setActive('index');{!matches?handleDrawerToggle():console.log()}}}>
          
           <HomeIcon sx={{color:'#0a1529', borderColor:'#0a1929',
         border: '1px solid grey',borderRadius: '5px', margin:'5px'}}/>
@@ -111,7 +111,7 @@ setInterval(() => {
       <Divider />
       <List>
        
-          <ListItem button onClick={() => {setActive('Create');handleDrawerToggle()}}>
+          <ListItem button onClick={() => {setActive('Create');{!matches?handleDrawerToggle():console.log()}}}>
          
           <FormatListBulletedIcon sx={{color:'#0a1529', borderColor:'#0a1929',
         border: '1px solid grey',borderRadius: '5px', margin:'5px'}}/>
@@ -125,7 +125,7 @@ setInterval(() => {
       <List>
        
           <ListItem button onClick={() => {setActive('Gains');
-          handleDrawerToggle()}}>
+          {!matches?handleDrawerToggle():console.log()}}}>
          
           <EuroIcon sx={{color:'#0a1529', borderColor:'#0a1929',
         border: '1px solid grey',borderRadius: '5px', margin:'5px'}}/>
@@ -139,7 +139,7 @@ setInterval(() => {
       <List>
        
           <ListItem button onClick={()=> {setActive('Fiches');
-          handleDrawerToggle()}} >
+          {!matches?handleDrawerToggle():console.log()}}} >
          
           <AssignmentTwoToneIcon sx={{color:'#0a1529', borderColor:'#0a1929',
         border: '1px solid grey',borderRadius: '5px', margin:'5px'}}/>
@@ -152,7 +152,7 @@ setInterval(() => {
       <Divider />
       <List>
        
-          <ListItem button onClick={()=> {setActive('Contact');handleDrawerToggle()}} >
+          <ListItem button onClick={()=> {setActive('Contact');{!matches?handleDrawerToggle():console.log()}}} >
          
           <ContactMailIcon sx={{color:'#0a1529', borderColor:'#0a1929',
         border: '1px solid grey',borderRadius: '5px', margin:'5px'}}/>

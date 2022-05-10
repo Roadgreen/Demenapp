@@ -11,10 +11,11 @@
     width: 70%;
     text-align: center;
     color: white;
+    text-shadow: 0 0 10px rgba(5, 3, 87, 0.5), 0 0 1px rgba(24, 21, 202, 0.5);
 }
 .button{
     color: white;
-    background-color: antiquewhite;
+    background-color: rgba(250, 235, 215, 0.349);
 }
 .Response{
     background-color: rgb(35, 209, 44);
