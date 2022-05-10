@@ -67,7 +67,6 @@ function DashboardMenu(props) {
 
 const checkNotif = async () => {
  
-
   await axios.get('/api/user/notif',{
     
       params: {
@@ -99,7 +98,7 @@ setInterval(() => {
       <Divider />
       <List>
        
-          <ListItem button onClick={() => {setActive('index')}}>
+          <ListItem button onClick={() => {setActive('index');handleDrawerToggle()}}>
          
           <HomeIcon sx={{color:'#0a1529', borderColor:'#0a1929',
         border: '1px solid grey',borderRadius: '5px', margin:'5px'}}/>
@@ -112,7 +111,7 @@ setInterval(() => {
       <Divider />
       <List>
        
-          <ListItem button onClick={() => {setActive('Create')}}>
+          <ListItem button onClick={() => {setActive('Create');handleDrawerToggle()}}>
          
           <FormatListBulletedIcon sx={{color:'#0a1529', borderColor:'#0a1929',
         border: '1px solid grey',borderRadius: '5px', margin:'5px'}}/>
@@ -125,7 +124,8 @@ setInterval(() => {
       <Divider />
       <List>
        
-          <ListItem button onClick={() => setActive('Gains')}>
+          <ListItem button onClick={() => {setActive('Gains');
+          handleDrawerToggle()}}>
          
           <EuroIcon sx={{color:'#0a1529', borderColor:'#0a1929',
         border: '1px solid grey',borderRadius: '5px', margin:'5px'}}/>
@@ -138,7 +138,8 @@ setInterval(() => {
       <Divider />
       <List>
        
-          <ListItem button onClick={()=> setActive('Fiches')} >
+          <ListItem button onClick={()=> {setActive('Fiches');
+          handleDrawerToggle()}} >
          
           <AssignmentTwoToneIcon sx={{color:'#0a1529', borderColor:'#0a1929',
         border: '1px solid grey',borderRadius: '5px', margin:'5px'}}/>
@@ -151,7 +152,7 @@ setInterval(() => {
       <Divider />
       <List>
        
-          <ListItem button onClick={()=> setActive('Contact')} >
+          <ListItem button onClick={()=> {setActive('Contact');handleDrawerToggle()}} >
          
           <ContactMailIcon sx={{color:'#0a1529', borderColor:'#0a1929',
         border: '1px solid grey',borderRadius: '5px', margin:'5px'}}/>

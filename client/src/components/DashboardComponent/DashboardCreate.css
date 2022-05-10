@@ -10,10 +10,11 @@
 .Form{
     width: 70%;
     text-align: center;
-    color: rgb(197, 148, 56);
+    color: white;
 }
 .button{
-    color: rgb(197, 148, 56);
+    color: white;
+    background-color: antiquewhite;
 }
 .Response{
     background-color: rgb(35, 209, 44);
