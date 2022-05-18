@@ -149,7 +149,7 @@ return(
        
 
         <Col md>
-  <h5 style={{fontSize: '1.2em'}}>Vous êtes:</h5>
+  <h5 style={{fontSize: '1.2em',color:'black'}}>Vous êtes:</h5>
 <Form.Check
         name='type'
         type='radio'
@@ -309,7 +309,7 @@ return(
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="En cliquant ici vous acceptez les conditions général"  value={check} onChange={e => onChange(e)} required/>
   </Form.Group>
-  <Button className="button" variant="primary" type="submit">
+  <Button className="buttonType"  type="submit">
     S'enregistrer
   </Button>
 </Form>
