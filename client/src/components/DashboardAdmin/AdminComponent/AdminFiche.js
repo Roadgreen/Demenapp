@@ -17,14 +17,15 @@ import AdminEditClient from './AdminEditClient';
 
 
 const AdminFiche = () => {
+  const [ficheWait, setFicheWait] = useState([]);
+  const [ficheNew, setFicheNew] = useState([]);
+  const [ficheVal, setFicheVal] = useState([]);
   const ficheSearch = async ()=>{
     await axios.get('/client/info',{}).then(
       res=>{setFicheWait(res.data.ficheWait); setFicheNew(res.data.ficheNew);setFicheVal(res.data.ficheVal);}
     )
   }
-  const [ficheWait, setFicheWait] = useState([]);
-  const [ficheNew, setFicheNew] = useState([]);
-  const [ficheVal, setFicheVal] = useState([]);
+ 
 
 
    
@@ -41,6 +42,7 @@ const AdminFiche = () => {
         }
       }).then(res => {
         setFicheWait(res.data);
+        ficheSearch()
       })
    }
 
@@ -105,7 +107,7 @@ a,b,c,d,e,f,
         <GridActionsCellItem
           icon={<DeleteIcon />}
           label="Delete"
-          onClick={() => {DeleteFiche(params.id)}}
+          onClick={() => {DeleteFiche(params.id);}}
         />,
         <GridActionsCellItem
           icon={<EditIcon />}
