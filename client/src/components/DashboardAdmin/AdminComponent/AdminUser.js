@@ -94,13 +94,13 @@ const columnsWait = [
           <GridActionsCellItem
             icon={<DeleteIcon />}
             label="Delete"
-            onClick={() => {DeleteUser(params.id)}}
+            onClick={() => {DeleteUser(params.id); checkUser()}}
           />,
          
           <GridActionsCellItem
             icon={<CheckIcon />}
             label="Valider"
-            onClick={()=>{ValidateUser(params.id)}}
+            onClick={()=>{ValidateUser(params.id); checkUser()}}
             showInMenu
           />,
         ],
@@ -116,18 +116,18 @@ const columnsWait = [
               <GridActionsCellItem
                 icon={<DeleteIcon />}
                 label="Delete"
-                onClick={() => {DeleteUser(params.id)}}
+                onClick={() => {DeleteUser(params.id);checkUser()}}
               />,
               <GridActionsCellItem
                 icon={<EditIcon />}
                 label="Editer"
-                onClick={()=>{EditUser(params.id)}}
+                onClick={()=>{EditUser(params.id);checkUser()}}
                 showInMenu
               />,
               <GridActionsCellItem
                 icon={<CheckIcon />}
                 label="Valider"
-                onClick={()=>{ValidateUser(params.id)}}
+                onClick={()=>{ValidateUser(params.id);checkUser()}}
                 showInMenu
               />,
             ],
