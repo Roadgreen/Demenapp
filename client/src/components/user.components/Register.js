@@ -2,13 +2,14 @@ import React,{useState} from "react";
 import './Register.css';
 import logo from '../../img/logo-demenhouse.png'
 import {Container, Form, Button,Col,Row} from 'react-bootstrap'
-import {Link} from 'react-router-dom'
+import {Link,Redirect} from 'react-router-dom'
 import axios from 'axios'
 import { fontSize } from "@mui/system";
 
 const Register = () => {
   const [ribInput,setRibInput] = useState(false);
   const [typeChoice,setTypeChoice] = useState('Auto');
+  const [redirect,setRedirect] = useState('');
     const [formData, setFormData] = useState({
       username: '',
       nom: '',
@@ -61,6 +62,7 @@ const Register = () => {
 
     const onSubmit = async e => {
       e.preventDefault();
+     
       console.log(formData);
       //On remet par default les error vide
       const errmail = document.querySelector('.emailerror');
@@ -131,7 +133,7 @@ const Register = () => {
             errmail.innerText = 'Cette email est déjà pris par un autre utilisateur. Veuillez indiquer un autre email.';
             errmail.style.color = 'grey';
           } else{
-            window.location.replace("/");
+            setRedirect('true')
           }
         }).catch(err => {
           console.log(err);
@@ -314,7 +316,7 @@ return(
   </Button>
 </Form>
  
-
+{redirect === `true` ? <Redirect to={`/`}></Redirect> : console.log('')}
     </Container>
     
 )
