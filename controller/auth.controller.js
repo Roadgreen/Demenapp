@@ -116,8 +116,9 @@ module.exports.signUp = async (req, res) => {
               port: 587,
               secure: false, // true for 465, false for other ports
               auth: {
-                user: 'demen.app.contact@gmail.com', // generated ethereal user
-                pass: `${process.env.MAIL_SECRET}`// generated ethereal password
+                type: "OAuth2",
+                clientId: "987085373119-1dj7u3e9o0u7qkf7k8u0mtd05mois2bb.apps.googleusercontent.com",
+                clientSecret: "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",
               }
             });
             let info =  transporter.sendMail({
@@ -125,6 +126,10 @@ module.exports.signUp = async (req, res) => {
               to: email, // list of receivers
               subject: "Bienvenue", // Subject line
               text: "Bienvenue", // plain text body
+              auth: {
+                user: "demen.app.contact@gmail.com",
+
+              },
               html:`
               <html>
               <head>
