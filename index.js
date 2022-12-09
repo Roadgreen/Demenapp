@@ -32,10 +32,10 @@ app.use('/api/user', userRoute);
 //Fiche Client Route
 app.use('/client', clientRoute)
 
-app.use(express.static(path.resolve(__dirname, './client/build')));
-app.get('*', (_,res) => {
-  res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
-})
+//app.use(express.static(path.resolve(__dirname, './client/build')));
+//app.get('*', (_,res) => {
+  //res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
+//})
 
 app.listen(PORT, function () {
     console.log('CORS-enabled web server listening on port 80')
